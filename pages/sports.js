@@ -1,7 +1,7 @@
 import { Stackcomponent } from "@/components/Stackcomponent";
 import React from "react";
 import { Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
-import SportSection from "@/components/SportSection";
+import { SportSection } from "@/components/SportSection";
 
 export default function sports() {
   return (

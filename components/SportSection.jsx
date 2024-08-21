@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
 
-export default function SportSection(props) {
+export const SportSection = (props) => {
   const { title, imgSrc, description, imageFirst } = props;
 
   return (
@@ -67,4 +67,4 @@ export default function SportSection(props) {
       </Flex>
     </>
   );
-}
+};

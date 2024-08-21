@@ -1,5 +1,6 @@
 import React from "react";
 
-export const faculties = () => {
+const faculties = () => {
   return <div>faculties</div>;
 };
+export default faculties;
