@@ -9,7 +9,7 @@ export const Stackcomponent = (props) => {
       px={[6, 4, 4, 2]}
       gap={5}
       overflow={"hidden"}
-      minH={"80vh"}
+      minH={"90vh"}
       flexDirection={["column-reverse", "column-reverse", "row", "row"]}
       ml={[5, 10, 5, 5]}
       mr={[5, 10, 5, 5]}
@@ -42,6 +42,7 @@ export const Stackcomponent = (props) => {
       </Flex>
       <Flex flex={1} h={"80vh"}>
         <Image
+          loading="lazy"
           borderRadius={"md"}
           objectFit={"cover"}
           alt={"Sports Image"}

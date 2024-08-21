@@ -32,6 +32,7 @@ import { MdCastForEducation } from "react-icons/md";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export const Navbar = (props) => {
   const { menuColor = "white" } = props;
@@ -168,14 +169,15 @@ export const Navbar = (props) => {
                               ? "white"
                               : "black"
                           }
+                          boxSizing="border-box"
                           px={2}
                           border="2px solid transparent"
                           borderRadius={"md"}
                           cursor={"pointer"}
                           transitionDuration={"0.5s"}
                           _hover={{
-                            color: scrolled ? "gray.600" : "black",
-                            border: "2px",
+                            color: scrolled ? "blue.400" : "black",
+                            border: "2px ",
                             textDecoration: "none",
                           }}
                           onClick={() => {
@@ -217,7 +219,7 @@ export const Navbar = (props) => {
                 textDecoration: "none",
               }}
             >
-              Contact us
+              <Link href="/">Contact us</Link>
             </Text>
           </motion.div>
         </Flex>

@@ -72,7 +72,7 @@ export default function Home() {
                 textShadow={"0px 0px 10px black"}
                 transitionDuration={"1s"}
                 fontWeight={"semibold"}
-                _hover={{ color: "yellow", transform: "scale(1.1)" }}
+                _hover={{ color: "green.400", transform: "scale(1.1)" }}
               >
                 Shree Mahendra Secondary School
               </Text>
@@ -84,8 +84,7 @@ export default function Home() {
             >
               <Heading
                 textAlign={"center"}
-                fontSize={["xx-large", "xxx-large", "6xl"]}
-                fontWeight={"semibold"}
+                fontSize={["x-large", "xx-large", "xxx-large", "6xl"]}
               >
                 Clear Path for Education
               </Heading>

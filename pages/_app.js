@@ -4,6 +4,7 @@ import { useRouter } from "next/router"; // Import useRouter hook
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
+import { extendTheme } from "@chakra-ui/react";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -23,9 +24,19 @@ export default function App({ Component, pageProps }) {
     };
   }, [router.events]);
 
+  const theme = extendTheme({
+    components: {
+      Heading: {
+        baseStyle: {
+          fontFamily: "Georgia, serif",
+        },
+      },
+    },
+  });
+
   return (
     <>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         {!showNavbar && <Navbar menuColor="black" />}
         <Component {...pageProps} />
 

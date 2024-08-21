@@ -16,7 +16,7 @@ const MasonryImageGrid = ({ images }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const columns = useBreakpointValue({ base: 1, sm: 2, md: 3, lg: 3 });
+  const columns = useBreakpointValue({ base: 1, sm: 2, md: 3, lg: 4 });
 
   const spanValues = useMemo(
     () => images.map(() => Math.floor(Math.random() * 3) + 1),
@@ -44,7 +44,7 @@ const MasonryImageGrid = ({ images }) => {
       <Grid
         p={[1, 2, 4]}
         templateColumns={`repeat(${columns}, 1fr)`}
-        gap={6}
+        gap={10}
         sx={{
           display: "grid",
           gridAutoFlow: "dense",
@@ -62,13 +62,13 @@ const MasonryImageGrid = ({ images }) => {
             position="relative"
             overflow="hidden"
             borderRadius="sm"
-            style={{ boxShadow: "1px 1px 10px gray" }}
+            boxShadow={"sm"}
             sx={{
               gridRowEnd: `span ${spanValues[index]}`,
               cursor: "pointer",
             }}
             _hover={{
-              borderRadius: "20px",
+              borderRadius: "10px",
             }}
             onClick={() => handleImageClick(src)}
           >
